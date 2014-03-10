@@ -182,42 +182,42 @@
      // .addColumns('column1', 'column2', 'column3');
      // .addRow('value1A', 'value1B', 'value1C');
      // .addRow('value2A', 'value2B', 'value2C');
-     var DataTable = function()
+        var DataTable = function()
 {
 //private variables
-var datatable = this;
 var col = [];
 var row = [];
 
-datatable.addRow=function()
+function addRow()
+{
+var rows = [];
+for(var i=0;i<arguments.length;i++)
+{
+if(typeof arguments[i] !=='string')
+{
+console.log("not string!");
+}
+rows.push(arguments[i]);
+}
+console.log(row.push(rows));
+}
+ 
+function addCol()
 {
 for(var i=0;i<arguments.length;i++)
 {
-if(typeof arguments[i] !='string')
+if(typeof arguments[i] !=='string')
 {
 console.log("not string!");
 }
 console.log(row.push(arguments[i]);
 }
-};
- 
-datatable.addCol = function ()
-{
-for(var i=0;i<arguments.length;i++)
-{
-if(typeof arguments[i] !='string')
-{
-console.log("not string!");
 }
-console.log(col.push(arguments[i]);
-}
-};
 
-datatable.getData = function ()
+function getData()
 {
 console.log(col,row);
-};
-
+}
 }
        
       
