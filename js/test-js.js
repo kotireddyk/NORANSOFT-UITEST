@@ -182,42 +182,39 @@
      // .addColumns('column1', 'column2', 'column3');
      // .addRow('value1A', 'value1B', 'value1C');
      // .addRow('value2A', 'value2B', 'value2C');
-     var DataTable = function()
-{
-//private variables
-var datatable = this;
-var col = [];
-var row = [];
+     var DataTable = function() {
+     //private variables
+     var columns = [];
+     var rows = [];
 
-datatable.addRow=function()
-{
-for(var i=0;i<arguments.length;i++)
-{
-if(typeof arguments[i] !='string')
-{
-console.log("not string!");
-}
-console.log(row.push(arguments[i]);
-}
-};
- 
-datatable.addCol = function ()
-{
-for(var i=0;i<arguments.length;i++)
-{
-if(typeof arguments[i] !='string')
-{
-console.log("not string!");
-}
-console.log(col.push(arguments[i]);
-}
-};
+     return {
 
-datatable.getData = function ()
-{
-console.log(col,row);
-};
+          function addRow() {
+               for(var i = 0; i < arguments.length; i++) {
+                    if(typeof arguments[i] !== 'string') {
+                         console.log("not string!");
+                    }
+                    rows.push(arguments[i]);
+               }
+               console.log(rows.push(rows));
+          }
+           
+          function addColumns() {
+               for(var i = 0; i < arguments.length; i++) {
+                    if(typeof arguments[i] !== 'string') {
+                         console.log("not string!");
+                    }
+                    console.log(columns.push(arguments[i]);
+               }
+          }
 
+          function getData(row, column) {
+               var result ={};
+               result[columns[column]] = rows[row];
+               return result;
+               console.log(columns,rows);
+          }
+     };
 }
        
       
