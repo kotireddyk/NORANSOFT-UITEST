@@ -194,9 +194,8 @@
                     if(typeof arguments[i] !== 'string') {
                          console.log("not string!");
                     }
-                    rows.push(arguments[i]);
+                    console.log(rows.push(arguments[i]));
                }
-               console.log(rows.push(rows));
           }
            
           function addColumns() {
